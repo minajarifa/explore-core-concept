@@ -4,11 +4,11 @@ export default function Counter() {
   const [runs, setRuns] = useState(0);
   const [sixes, setsixes] = useState(0);
   const [fours, setFours] = useState(0);
-  // const handleAdd = () => {
-  //   const newRuns = runs + 1;
-  //   console.log(runs);
-  //   setRuns(newRuns);
-  // };
+  const handleAdd = () => {
+    const newRuns = runs + 1;
+    console.log(runs);
+    setRuns(newRuns);
+  };
   const handleSix = () => {
     const updateRun = runs + 6;
     setRuns(updateRun);
@@ -34,9 +34,9 @@ export default function Counter() {
     alert(" I Am Click Me 3");
   };
  
-  fetch(`https://jsonplaceholder.typicode.com/posts`)
-  .then(res=>res.json())
-  .then(data=>console.log(data))
+  // fetch(`https://jsonplaceholder.typicode.com/posts`)
+  // .then(res=>res.json())
+  // .then(data=>console.log(data))
   // const loadData=async()=>{
   //   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
   //   const data = res.json()
@@ -44,29 +44,30 @@ export default function Counter() {
 
   // }
   return (
-    <div>
+    <div className="text-center">
       <p>six: {sixes}</p>
       <p>four: {fours}</p>
       <div style={counterStyle}>
         <p>Runs: {runs}</p>
-        <button onClick={handleAdd}>singles</button>
-        <button onClick={handleSix}>six</button>
-        <button onClick={handleFour}>Four</button>
+        <button className="p-4 btn btn-outline btn-primary " onClick={handleAdd}>singles</button>
+        <button className="p-4 btn btn-outline btn-primary " onClick={handleSix}>six</button>
+        <button className="p-4 btn btn-outline btn-primary " onClick={handleFour}>Four</button>
       </div>
         <div>
         <h3>Vite + React</h3>
        
-        <button onClick={handleClink}>Click me</button>
+        <button className="m-5 btn btn-outline btn-primary" onClick={handleClink}>Click me</button>
         <button
+        className="m-5 btn btn-outline btn-primary"
           onClick={function handleClink2() {
             alert("I am clicked 2");
           }}
         >
           Click me 2
         </button>
-        <button onClick={handleClickMe3}>clik me 3</button>
-        <button onClick={() => alert("I am click")}>clik me 4</button>
-        <button onClick={() => handleAdd(1)}>Click me 5</button>
+        <button className="m-5 btn btn-outline btn-primary" onClick={handleClickMe3}>clik me 3</button>
+        <button className="m-5 btn btn-outline btn-primary" onClick={() => alert("I am click")}>clik me 4</button>
+        <button className="m-5 btn btn-outline btn-primary" onClick={() => handleAdd(1)}>Click me 5</button>
       </div>
     </div>
   );
