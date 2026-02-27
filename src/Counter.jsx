@@ -1,4 +1,4 @@
-import { Suspense, use, useState } from "react";
+import { Suspense, useState } from "react";
 
 export default function Counter() {
   const [runs, setRuns] = useState(0);
