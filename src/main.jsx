@@ -1,4 +1,3 @@
-import React from 'react'; // Add this line
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -8,8 +7,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Page/Home.jsx';
-import Counter from './Counter.jsx';
 import Users from './Page/Users.jsx';
+import Counter from './Page/Counter.jsx';
 
 const router = createBrowserRouter([
   {

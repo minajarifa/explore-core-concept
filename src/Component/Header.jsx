@@ -48,8 +48,9 @@ export default function Header() {
              <Link to={'/Counter'} >Counter</Link>
             </li>
             <li>
-              <Link to={`Users`}>Users</Link>
+              <Link to={`/Users`}>Users</Link>
             </li>
+            
           </ul>
         </div>
         <div className="navbar-end">
