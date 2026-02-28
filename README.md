@@ -1,12 +1,12 @@
 # Multiple Countries visited website 
 
-This website created by HTML, tailwindCSS, javasrcipt and react 
+This simple website created by HTML, tailwindCSS, javasrcipt and react 
 
 
 
 ## Live link of website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://astounding-snickerdoodle-d10651.netlify.app).
+click this link to visite my website [this website](https://astounding-snickerdoodle-d10651.netlify.app).
 
 ## Expanding the ESLint configuration
 
