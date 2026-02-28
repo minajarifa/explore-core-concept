@@ -28,7 +28,7 @@ export default function Countries({ countriesPromise }) {
           <li key={index}>{counntri?.cca3?.cca3}</li>
         ))}
       </ol>
-      <div className="container grid grid-cols-4 p-8 my-24 border">
+      <div className={`container grid grid-cols-4 ${visiteFlags.length>0}&&"p-8 my-24 border"`}>
         {visiteFlags.map((flag,index) => (
           <img className="h-40 m-8 w-" key={index} src={flag}></img>
         ))}
