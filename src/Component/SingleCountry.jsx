@@ -1,13 +1,21 @@
 import { useState } from "react";
 
-export default function SingleCountry({ countrie }) {
-const [visited,setVisited]=useState(false)
-  const handleVisited=()=>{
-    setVisited(true)
-  }
+export default function SingleCountry({ countrie ,handleVisitedCountries,handleVisitedFlag}) {
+  const [visited, setVisited] = useState(false);
+
+  const handleVisited = () => {
+      // setVisited(visited?false:true)
+      // if (visited) {
+        //   setVisited(false);
+        // } else {
+            //   setVisited(true);
+            // }
+            setVisited(!visited);
+            handleVisitedCountries(countrie)
+  };
   return (
-    <div>
-      <div className="shadow-sm card bg-base-100 w-96">
+    <div className={``}>
+      <div className={`shadow-sm card bg-base-100 w-96  ${visited && "bg-purple-400"}`}>
         <figure>
           <img src={countrie?.flags?.flags?.png} alt="Shoes" />
         </figure>
@@ -24,9 +32,10 @@ const [visited,setVisited]=useState(false)
           </p>
           <div className="justify-end card-actions">
             <button onClick={handleVisited} className="btn btn-primary">
-                {
-                    visited?"Visited":"Not Visited"
-                }
+              {visited ? "Visited" : "Not Visited"}
+            </button>
+            <button onClick={()=>handleVisitedFlag(countrie?.flags?.flags?.png)} className="btn btn-primary">
+              Add Visited Flag
             </button>
           </div>
         </div>
